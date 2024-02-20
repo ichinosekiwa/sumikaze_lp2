@@ -1,26 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
     <title>澄風</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header></header>
     <div class="l-content">
-        <div class="l-content__bg">
-            <main class="l-content__main">
-                <h1 class="l-content__title">澄風</h1>
-            </main>
-        </div>
-    </div>
-</body>
+      <div class="l-content__bg"></div>
+      <main class="l-content__main">
+        <section class="l-head">
+          <h1 class="l-content__title">
+            <img src="img/header_logo.svg" alt="澄風 SUMIKAZE" />
+          </h1>
+          <div class="c-cta">
+            <div class="c-tel">
+              <a href="tel:0120662109">
+                <img src="img/phone_in_talk.svg" alt="電話注文" />
+                <p>電話注文</p></a
+              >
+            </div>
+            <div class="p-wrap-cta-btn c-btn">
+              <form
+                action="https://shop.sumikaze.com/api/basket/add.html"
+                method="post"
+                target="_blank"
+              >
+                <input
+                  type="hidden"
+                  name="brand_info"
+                  value="1,000000000001,1"
+                />
+                <input
+                  class="u-btn c-btn-purchase p-layout-flex u-flex__a-center u-flex__center"
+                  type="submit"
+                  value="購入する"
+                />
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="l-mv">
+          <h2>
+            <img
+              src="img/MV.jpg"
+              alt="ウイルス・におい対策にプラズマオゾンという選択肢"
+            />
+          </h2>
+        </section>
+        <section class="l-second">
+          <p>
+            空気をきれいにするのは、<br />
+            空気清浄機だけじゃない。
+          </p>
+          <h3>
+            これからの時代は、澄風の<br />
+            <span>プラズマオゾン</span>で<br /><span class="h-la"
+              >空気をきれいに。</span
+            >
+          </h3>
+          <img src="img/image_sumikaze.png" alt="澄風" />
+        </section>
+        <section class="l-difference">
+          <h2>
+            <span class="c-en">DIFFERENCE</span>
+            空気清浄機と「澄風」の違い
+          </h2>
+          <div class="l-difference__wrap">
+            <img src="img/img_difference-01.png" alt="空気清浄機と澄風の違い" />
+            <img src="img/img_difference-02.png" alt="空気清浄機と澄風の違い" />
+          </div>
+          <div class="l-difference__txt">
+            <p>
+              澄風はたったの<span class="num_la">1.7</span
+              ><span class="txt-md">kg</span>
+            </p>
+            <p>
+              2Lペットボトルより軽く<br />
+              簡単にどこにでも持ち運べて、
+            </p>
 
+            <h3>
+              <span class="txt-md">
+                最大<span class="num_la">20畳</span>対応</span
+              >
+            </h3>
+            <img
+              class="c-difference-bg"
+              src="img/img_difference-03.png"
+              alt="空気清浄機と澄風の違い"
+            />
+          </div>
+          <div class="l-difference__item">
+            <img src="img/img_difference-04.jpg" alt="空気清浄機と澄風の違い" />
+          </div>
+        </section>
+        <section class="l-features">
+          <h2>
+            <span class="c-en">FEATURES</span>
+            オゾンの特性
+          </h2>
+          <div class="l-features__wrap">
+            <ul>
+              <li class="p-list-01">
+                <span class="c-list-num">01</span>
+                <h4>
+                  オゾンは<span class="txt-la">自然界</span>にも<br />
+                  <span class="txt-la">存在する物質</span>です
+                </h4>
+              </li>
+              <li class="p-list-02">
+                <img
+                  src="img/img_features-02.png"
+                  alt="菌・ウイルス・においの原因物質"
+                />
+                <span class="c-list-num">02</span>
+                <h4>
+                  菌・ウイルス・<br />においの原因物質に<br />
+                  <span class="txt-la">直接作用</span>します
+                </h4>
+              </li>
+              <li class="p-list-03">
+                <span class="c-list-num">03</span>
+                <h4>
+                  酸素に戻る<br />
+                  特性があるので、<br />
+                  <span class="txt-la">安全性が高い</span>
+                </h4>
+              </li>
+            </ul>
+
+            <p class="p-txt-wrap">
+              ただ、オゾンは濃度によっては人体への影響が懸念されるため、<strong>適切にコントロール</strong>する必要があります。
+            </p>
+            <div class="l-features__txt">
+              <p>澄風なら安心</p>
+              <h5>
+                最適<span class="txt-xs">な</span>オゾン濃度<span class="txt-xs"
+                  >を</span
+                ><br />
+                自動<span class="txt-xs">で</span>制御
+              </h5>
+            </div>
+            <p class="txt-center">
+              日本特殊陶業だからこそ<br />
+              実現できる高度な技術です
+            </p>
+          </div>
+          <div class="p-niterra">
+            <img src="img/img_nittera-01.png" alt="日本特殊陶業" />
+            <div class="p-niterra__wrap">
+              <h5>東証プライム市場・名証プレミア市場上場</h5>
+              <p>
+                日本特殊陶業は、エンジン用スパークプラグ・排ガス用センサで<strong>世界No.1のシェア</strong>を誇る企業です。
+              </p>
+            </div>
+            <p class="p-niterra__txt">
+              澄風は<strong>日本特殊陶業が独自に開発</strong>した低濃度オゾン制御技術を組み込み、<strong>安全で効果的な濃度を自動で維持</strong>させることを可能にしました。
+            </p>
+          </div>
+          <div class="p-safety">
+            <h3>
+              部品<span class="txt-xs">から</span>すべて<br />日本製<span
+                class="txt-xs"
+                >の</span
+              >安心設計
+            </h3>
+            <img src="img/img_nittera-02.jpg" alt="部品からすべて国内製造" />
+            <p class="p-safety__txt">
+              澄風は<strong>部品からすべて国内製造</strong>です。オゾン発生体には、腐食・汚れに強い日本特殊陶業独自開発のセラミック製プラズマリアクタを搭載。<strong>長期間安定してオゾンを発生させることが可能</strong>です。
+            </p>
+          </div>
+            <div class="p-certification">
+              <div class="p-certification__txt">
+                <h4>
+                  澄風は第三者機関である<br />日本オゾン協会の 認定を<br />受けています
+                </h4>
+                <div class="p-certification__img">
+                  <img
+                    class="img-ninntei"
+                    src="img/ninntei.png"
+                    alt="小型オゾン発生装置型式認定証"
+                  />
+                  <img
+                    class="img-ninntei-logo"
+                    src="img/nintei-logo.png"
+                    alt="認定ロゴ"
+                  />
+                </div>
+                <p>
+                  澄風は生産・品質管理体制、アフターサービス・クレーム処理体制、安全性や有効性を、第三者機関である日本オゾン協会により認定されています。
+                </p>
+              </div>
+            </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

@@ -1,5 +1,519 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+:root {
+  color: #1D2A4A;
+  line-height: 1.7;
+  font-size: 16px;
+  font-family: "Noto Sans JP", "Zen Old Mincho", "Mohave", sans-serif;
+}
+
+:where([hidden]:not([hidden=until-found])) {
+  display: none !important;
+}
+
+:where(html) {
+  -webkit-text-size-adjust: none;
+  color-scheme: dark light;
+  -moz-tab-size: 2;
+    -o-tab-size: 2;
+       tab-size: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html:focus-within) {
+    scroll-behavior: smooth;
+  }
+}
+:where(body) {
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(button) {
+  all: unset;
+}
+
+:where(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+:where(textarea) {
+  resize: vertical;
+  resize: block;
+}
+
+:where(button, label, select, summary, [role=button], [role=option]) {
+  cursor: pointer;
+}
+
+:where(:disabled) {
+  cursor: not-allowed;
+}
+
+:where(label:has(> input:disabled), label:has(+ input:disabled)) {
+  cursor: not-allowed;
+}
+
+:where(a) {
+  color: inherit;
+  text-underline-offset: 0.2ex;
+}
+
+:where(ul, ol) {
+  list-style: none;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+  display: block;
+}
+
+:where(img, picture, svg, video) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+:where(h1, h2, h3) {
+  line-height: calc(1em + 0.5rem);
+  text-wrap: balance;
+}
+
+:where(hr) {
+  border: none;
+  border-block-start: 1px solid;
+  color: inherit;
+  block-size: 0;
+  overflow: visible;
+}
+
+:where(:focus-visible) {
+  outline: 3px solid CanvasText;
+  box-shadow: 0 0 0 5px Canvas;
+  outline-offset: 1px;
+}
+
+:where(:focus-visible, :target) {
+  scroll-margin-block: 8vh;
+}
+
+:where(.visually-hidden:not(:focus-within, :active)) {
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+html {
+  vertical-align: baseline;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow: auto;
+}
+
+.l-content__bg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100lvh;
+  background-color: #FFF;
+  background: url(../img/contrast-LP_PC.jpg) no-repeat center/cover;
+}
+.l-content__bg::after {
+  content: "";
+  background: url(../img/logo_bgPc.svg);
+  position: absolute;
+  width: 252px;
+  height: 175px;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 9.2vw;
+}
+.l-content__main {
+  width: 29.166vw;
+  max-width: 100%;
+  min-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100lvh;
+  overflow: hidden;
+  background: #FFF;
+  position: relative;
+  z-index: 100;
+}
+
+.l-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding: 12px 16px;
+}
+.l-head .c-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+.l-head .c-tel {
+  display: flex;
+  color: #7A8096;
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+.l-head .c-tel img {
+  margin: 0 auto;
+}
+.l-head .p-wrap-cta-btn.c-btn {
+  border-radius: var(--4, 4px);
+  background: var(---bg-pink-500, #FF4868);
+  padding: 9px 8px;
+  color: #FFF;
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 100%;
+  display: grid;
+  place-items: center;
+  height: 48px;
+}
+
+.l-second {
+  padding: 56px 20px var(--80, 80px);
+  background: url(../img/img_bg01.png) no-repeat center/cover;
+  min-height: 514px;
+  position: relative;
+  margin-bottom: 128px;
+}
+.l-second p {
+  font-family: "Noto Sans CJK JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  margin-bottom: 2rem;
+}
+.l-second h3 {
+  font-family: "Zen Old Mincho";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  padding-bottom: 56px;
+}
+.l-second h3 span {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.l-second h3 span.h-la {
+  font-size: 24px;
+  line-height: 2;
+}
+.l-second img {
+  position: absolute;
+  width: 201px;
+  height: auto;
+  left: 50%;
+  bottom: -59px;
+  transform: translateX(-50%);
+}
+
+h2 {
+  font-family: "Zen Old Mincho";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+h2 span.c-en {
+  color: var(---text-bluegray-200, #D3D8E3);
+  text-align: center;
+  font-family: Mohave;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.l-difference {
+  padding-top: 64px;
+  margin-bottom: 80px;
+  background: #FAFAFA;
+}
+.l-difference h2 {
+  font-family: "Zen Old Mincho";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.l-difference h2 span.c-en {
+  color: var(---text-bluegray-200, #D3D8E3);
+  text-align: center;
+  font-family: Mohave;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+.l-difference__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 24px;
+}
+.l-difference__txt {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  padding: 29px 24px 275px;
+  position: relative;
+}
+.l-difference__txt span.num_la {
+  font-family: "Zen Old Mincho";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 3.84px;
+}
+.l-difference__txt .txt-md {
+  font-family: "Zen Old Mincho";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 2.56px;
+}
+.l-difference img.c-difference-bg {
+  position: absolute;
+  right: -24px;
+  bottom: 0;
+  width: 312px;
+  height: 382px;
+}
+
+.l-difference__txt p:nth-child(1) {
+  margin-bottom: 12px;
+}
+
+.l-difference__txt p:nth-child(2) {
+  margin-bottom: 6px;
+}
+
+.l-features ul li .c-list-num {
+  font-family: Mohave;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+  padding-left: 40px;
+  display: block;
+  margin-bottom: 16px;
+}
+.l-features ul li h4 {
+  font-family: "Zen Old Mincho";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  padding-left: 40px;
+}
+.l-features ul li h4 span.txt-la {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+.l-features ul li.p-list-01 {
+  background: url(../img/img_features-01.png) no-repeat center/cover;
+  padding-top: 218px;
+  padding-bottom: 40px;
+  color: var(---text-white, #FFF);
+  text-shadow: 0px 0px 8px #000;
+}
+.l-features ul li.p-list-02 {
+  padding-top: 38px;
+  padding-bottom: 33px;
+  background: linear-gradient(0deg, #E9E9E9 20.5%, #FFF 67.5%), lightgray -153.08px 0px/181.643% 98.947% no-repeat;
+  color: #1D2A4A;
+}
+.l-features ul li.p-list-02 img {
+  width: 299px;
+  height: 238px;
+  margin: 0 auto;
+}
+.l-features ul li.p-list-03 {
+  background: url(../img/img_features-03.png) no-repeat center/cover;
+  padding-top: 192px;
+  padding-bottom: 40px;
+  text-shadow: 0px 0px 8px #FFF;
+}
+.l-features .p-txt-wrap {
+  padding: 16px;
+  background: var(---bg-gray-100, #EFEFEF);
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 170%;
+  margin: 24px 24px 40px;
+}
+.l-features .l-features__txt {
+  padding: 0px 0 235px 24px;
+  background: url(../img/img_features-04.png) no-repeat center/cover;
+  margin-bottom: 24px;
+}
+.l-features .l-features__txt h5 {
+  font-family: "Zen Old Mincho";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.l-features p {
+  font-family: "Zen Old Mincho";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.l-features p.txt-center {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.p-niterra__wrap {
+  padding: 24px;
+  border: 1px solid var(---border-blue-950, #1D2A4A);
+  background: #FFF;
+  margin: 16px 24px;
+}
+.p-niterra__wrap h5 {
+  padding: var(--8, 8px);
+  background: var(---bg-blue-950, #1D2A4A);
+  color: var(---text-white, #FFF);
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.p-niterra p {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+}
+.p-niterra .p-niterra__txt {
+  margin: 0 24px 40px;
+}
+
+.p-safety {
+  margin: 0 24px;
+}
+.p-safety img {
+  margin: 16px auto;
+}
+.p-safety p {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.p-certification {
+  display: block;
+  padding: 40px 24px;
+  background: var(---bg-gray-50, #FAFAFA);
+}
+.p-certification__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 24px auto;
+}
+.p-certification__img .img-ninntei {
+  width: 148px;
+  height: 200px;
+  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.07);
+}
+.p-certification__img .img-ninntei-logo {
+  width: 98px;
+  height: 110px;
+}
+.p-certification h4 {
+  text-align: center;
+  font-family: "Zen Old Mincho";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.p-certification__txt p {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
 }/*# sourceMappingURL=style.css.map */
