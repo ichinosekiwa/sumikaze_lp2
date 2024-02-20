@@ -187,6 +187,12 @@ html {
   width: 100%;
   height: 72px;
   padding: 12px 16px;
+  position: fixed;
+  background: #fff;
+  width: 29.166vw;
+  max-width: 100%;
+  min-width: 420px;
+  z-index: 100;
 }
 .l-head .c-cta {
   display: flex;
@@ -219,6 +225,12 @@ html {
   display: grid;
   place-items: center;
   height: 48px;
+  width: 78px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.l-head .p-wrap-cta-btn.c-btn:hover {
+  opacity: 0.8;
 }
 
 .l-second {
@@ -343,7 +355,7 @@ h2 span.c-en {
 }
 .l-difference img.c-difference-bg {
   position: absolute;
-  right: -24px;
+  right: 0;
   bottom: 0;
   width: 312px;
   height: 382px;
@@ -426,6 +438,12 @@ h2 span.c-en {
   font-weight: 500;
   line-height: 150%;
 }
+.l-features .l-features__txt span.txt-xs {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
 .l-features p {
   font-family: "Zen Old Mincho";
   font-size: 24px;
@@ -473,6 +491,16 @@ h2 span.c-en {
 .p-safety img {
   margin: 16px auto;
 }
+.p-safety h3 {
+  font-family: "Zen Old Mincho";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.p-safety h3 span.txt-xs {
+  font-size: 24px;
+}
 .p-safety p {
   font-family: "Noto Sans JP";
   font-size: 16px;
@@ -516,4 +544,576 @@ h2 span.c-en {
   font-style: normal;
   font-weight: 400;
   line-height: 170%;
+}
+
+.l-reason {
+  padding: 0px 0 40px;
+  background: var(---bg-bluegray-500, #9DABC0);
+}
+.l-reason h2 {
+  color: #fff;
+  padding-top: 80px;
+  position: relative;
+  margin-bottom: 61px;
+}
+.l-reason h2 span.c-en {
+  color: #fff;
+}
+.l-reason h2 img {
+  width: 1px;
+  height: 45px;
+  position: absolute;
+  left: 50%;
+  bottom: -48px;
+  transform: translateX(-50%);
+}
+.l-reason .p-reason__items ul {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  counter-reset: number 0;
+}
+.l-reason .p-reason__items li {
+  position: relative;
+}
+.l-reason .p-reason__items li::before {
+  counter-increment: number 1;
+  content: "0" counter(number);
+  position: absolute;
+  top: 36px;
+  right: 40px;
+  color: rgba(255, 255, 255, 0.1);
+  text-align: right;
+  font-family: Mohave;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}
+.l-reason .p-reason__items li h3 {
+  color: var(---text-white, #FFF);
+  font-family: "Zen Old Mincho";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  padding-bottom: 16px;
+  padding-left: 24px;
+}
+.l-reason .p-reason__items li h3 span.txt-xs {
+  font-size: 24px;
+}
+.l-reason .p-reason__items li img {
+  width: 89%;
+  margin-bottom: 16px;
+}
+.l-reason .p-reason__items li p {
+  color: var(---text-white, #FFF);
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 94%;
+}
+.l-reason .p-reason__items li:nth-child(even) img {
+  margin: 0 0 16px auto;
+}
+.l-reason .p-reason__items li:nth-child(even) h3,
+.l-reason .p-reason__items li:nth-child(even) p {
+  padding-left: 40px;
+}
+.l-reason .c-jida {
+  width: 83%;
+  margin: 12px auto 0 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  padding: var(--8, 8px) 16px;
+  border: 1px solid var(---border-white, #FFF);
+  margin-top: 16px;
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  color: #fff;
+}
+.l-reason .c-jida img {
+  width: 78px;
+  height: 42px;
+  margin-bottom: 0;
+}
+
+.l-cta {
+  padding: 56px 24px;
+}
+.l-cta img.sumikaze_image {
+  width: 129px;
+  height: 156.465px;
+  margin: 0 auto 32px;
+  position: relative;
+}
+.l-cta img.sumikaze_image::after {
+  content: "";
+  background: url(../img/image_sumikaze-shadow.png) no-repeat center/contain;
+  position: absolute;
+  width: 129px;
+  height: 156.465px;
+}
+.l-cta h4 img {
+  margin: 0 auto 24px;
+}
+.l-cta h5 {
+  font-family: "Zen Old Mincho";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 2.7px;
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #DCDCDC;
+}
+.l-cta__price {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: baseline;
+  justify-content: center;
+  font-family: "Noto Sans JP";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
+.l-cta__price span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.l-cta__price .p-free {
+  border: 1px solid var(---border-black, #333);
+  position: relative;
+  bottom: 5px;
+  padding: 3px 8px 3px 8px;
+  margin-left: 4px;
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.l-cta__btn a {
+  height: var(--64, 64px);
+  padding: 9px 17px;
+  border-radius: var(--4, 4px);
+  background: var(---bg-pink-500, #FF4868);
+  width: 100%;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  display: grid;
+  place-items: center;
+  margin: 8px auto 16px;
+  transition: 0.3s;
+}
+.l-cta__btn a:hover {
+  opacity: 0.8;
+}
+.l-cta__tel {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  padding: 4px 0 4px 5px;
+  text-align: center;
+}
+.l-cta__tel a {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-align: left;
+  padding-left: 12px;
+  border-left: 1px solid var(---border-gray-200, #DCDCDC);
+}
+.l-cta__tel a span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+
+.l-voice {
+  padding: 80px 24px 40px;
+  background-color: #FAFAFA;
+}
+.l-voice__items ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.l-voice__items li {
+  background-color: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.l-voice__items li .c-txt-name {
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(---border-gray-200, #DCDCDC);
+}
+.l-voice__items li h3 {
+  font-family: "Zen Old Mincho";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.l-voice__items li p {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.c-btn-more {
+  color: var(---text-blue-950, #1D2A4A);
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  border: 1px solid var(---border-blue-950, #1D2A4A);
+  padding: 16px 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.scroll-fadein.is-display {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.p-faq-item {
+  background: #ffffff;
+}
+
+.p-faq-item:not(:nth-last-of-type(1)) {
+  margin-bottom: 24px;
+}
+
+.c-faq-term {
+  padding: 16px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  min-height: 74px;
+}
+
+.js-toggle-head {
+  position: relative;
+  cursor: pointer;
+}
+
+.js-toggle-head::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  right: 19px;
+  top: 50%;
+  border-radius: 1px;
+  transition-duration: 0.2s;
+  transform: translateY(-50%);
+  background-color: #DCDCDC;
+}
+
+.js-toggle-head::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  right: 12px;
+  top: 50%;
+  border-radius: 1px;
+  transform: translateY(-50%);
+  background-color: #DCDCDC;
+}
+
+/* FAQ */
+.l-faq {
+  padding: 80px 0 120px;
+  position: relative;
+  background: #FAFAFA;
+}
+.l-faq .l-inner {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.l-faq:before {
+  content: "";
+  width: 172px;
+  height: 114px;
+  background: url(../img/heading_faq.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -50px;
+  left: -860px;
+  right: 0;
+  margin: auto;
+}
+
+.p-faq-item {
+  background: #ffffff;
+}
+
+.p-faq-item:not(:nth-last-of-type(1)) {
+  margin-bottom: 24px;
+}
+
+.c-faq-description {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.c-faq-term p {
+  position: relative;
+  padding-left: 48px;
+  margin-right: 12px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.c-faq-term p:before {
+  content: "";
+  width: 31px;
+  height: 32px;
+  background: url(../img/icon_faq_q.svg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c-faq-description p {
+  position: relative;
+  padding-left: 48px;
+  word-break: break-all;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.c-faq-description p:before {
+  content: "";
+  width: 27px;
+  height: 32px;
+  background: url(../img/icon_faq_a.svg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* SPEC */
+.l-spec {
+  position: relative;
+}
+
+.p-spec__wrap {
+  padding: 80px 24px 0px;
+}
+
+.l-spec .l-inner {
+  padding: 0 24px;
+}
+
+.l-spec table {
+  margin: 0 auto 16px;
+  width: 100%;
+}
+
+.l-spec table,
+.l-spec tr,
+.l-spec th,
+.l-spec td {
+  border: 1px solid var(--border-gray);
+  border-collapse: collapse;
+  border: 1px solid var(---border-gray-200, #DCDCDC);
+}
+
+.l-spec th {
+  padding: 8px 16px;
+  width: 162px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  background: #FAFAFA;
+}
+
+.l-spec td {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.c-sell-heading {
+  width: 128px;
+}
+
+.c-icon-mode {
+  display: block;
+  margin: 8px auto 0;
+}
+
+.p-wrap-note {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.p-list-note:not(:nth-last-of-type(1)) {
+  margin-bottom: 4px;
+}
+
+.p-wrap-note dl {
+  display: flex;
+}
+
+.p-list-note dt {
+  width: 48px;
+  flex-basis: 42px;
+  flex-shrink: 0;
+}
+
+.p-caution {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  padding: 16px;
+  border: 1px solid var(---border-gray-200, #DCDCDC);
+}
+
+.p-caution h3 {
+  margin-bottom: 8px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+}
+
+.p-caution ul {
+  margin-left: 1em;
+  list-style: disc;
+}
+
+.p-caution li {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.l-spec .c-btn-more {
+  margin: 0 24px 24px;
+}
+
+.l-message {
+  padding: 80px 0 40px;
+  background: #FAFAFA;
+}
+.l-message__wrap {
+  margin-bottom: 40px;
+}
+.l-message .l-inner {
+  padding: 0 24px;
+  max-width: 100%;
+}
+.l-message .c-txt-message {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin-bottom: 40px;
+}
+.l-message .p-developer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.l-message .p-developer .c-company-name {
+  font-family: "Noto Sans JP";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  padding-bottom: 8px;
+}
+.l-message .p-developer .c-personal-info {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+footer img {
+  width: 280px;
+  height: 24px;
+  margin: 40px auto;
+}
+footer p.copy-right {
+  padding: 24px 0px;
+  background: var(---bg-blue-950, #1D2A4A);
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }/*# sourceMappingURL=style.css.map */
