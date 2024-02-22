@@ -65,14 +65,26 @@ $(window).bind("scroll", function () {
 
 
 // FAQアコーディオンテンプレート
-$(window).on("load resize", function () {
-    $(".js-toggle-head").off("click");
+$(document).ready(function () {
+    // 初期状態でアコーディオンを閉じる
+    $(".js-toggle-head").next(".js-toggle-body").hide();
 
-    $(".js-toggle-head").click(function () {
-        $(this).toggleClass("is-open");
-        $(this).next(".js-toggle-body").slideToggle();
+    $(window).on("load resize", function () {
+        $(".js-toggle-head").off("click");
+
+        $(".js-toggle-head").click(function () {
+            $(this).toggleClass("is-open");
+            $(this).next(".js-toggle-body").slideToggle();
+        });
+
+        // 閉じるボタンをクリックしたときの処理
+        $(".c-btn-close").click(function () {
+            $(this).parent().slideUp();
+            $(this).parent().prev(".js-toggle-head").removeClass("is-open");
+        });
     });
 });
+
 
 
 // Slick slider

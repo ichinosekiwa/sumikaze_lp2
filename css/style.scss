@@ -132,7 +132,6 @@ a {
 
 html {
   vertical-align: baseline;
-  font-size: 62.5%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   overflow: auto;
@@ -169,8 +168,8 @@ html {
 
   &__main {
     width: 29.166vw;
-    max-width: 100%;
-    min-width: 420px;
+    // min-width: 420px;
+    max-width: 420px;
     margin-left: auto;
     margin-right: auto;
     display: -webkit-box;
@@ -186,6 +185,7 @@ html {
     background: #FFF;
     position: relative;
     z-index: 100;
+    box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.10);
   }
 }
 
@@ -202,7 +202,7 @@ html {
   background: #fff;
   width: 29.166vw;
   max-width: 100%;
-  min-width: 420px;
+  // min-width: 420px;
   z-index: 100;
 
   .c-cta {
@@ -217,13 +217,13 @@ html {
     display: flex;
     color: #7A8096;
     font-family: "Noto Sans JP";
-    font-size: 12px;
+    font-size: clamp(11px, 3.2vw, 14px);
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
 
     img {
-      margin: 0 auto;
+      margin: 0 auto 6px;
     }
 
   }
@@ -234,7 +234,7 @@ html {
     padding: 9px 8px;
     color: #FFF;
     font-family: "Noto Sans JP";
-    font-size: 14px;
+    font-size: clamp(13px, 3.7333vw, 16px);
     font-weight: 700;
     line-height: 100%;
     display: grid;
@@ -250,6 +250,11 @@ html {
   }
 }
 
+.l-mv {
+  padding-top: 72px;
+
+}
+
 .l-second {
   padding: 56px 20px var(--80, 80px);
   background: url(../img/img_bg01.png)no-repeat center/cover;
@@ -257,9 +262,21 @@ html {
   position: relative;
   margin-bottom: 128px;
 
+  &::after {
+    content: "";
+    background: url(../img/image_sumikaze-shadow.png) no-repeat center/contain;
+    position: absolute;
+    z-index: -1;
+    width: 259px;
+    height: 156.465px;
+    left: 50%;
+    bottom: -116px;
+    transform: translateX(-50%);
+  }
+
   p {
-    font-family: "Noto Sans CJK JP";
-    font-size: 16px;
+    font-family: "Noto Sans JP";
+    font-size: clamp(15px, 4.26vw, 18px);
     font-style: normal;
     font-weight: 400;
     line-height: 200%;
@@ -268,20 +285,20 @@ html {
 
   h3 {
     font-family: "Zen Old Mincho";
-    font-size: 24px;
+    font-size: clamp(22px, 6.4vw, 28px);
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
     padding-bottom: 56px;
 
     span {
-      font-size: 40px;
+      font-size: clamp(40px, 10.666vw, 44px);
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
 
       &.h-la {
-        font-size: 24px;
+        font-size: clamp(22px, 6.4vw, 28px);
         line-height: 2;
       }
     }
@@ -299,7 +316,7 @@ html {
 
 h2 {
   font-family: "Zen Old Mincho";
-  font-size: 20px;
+  font-size: clamp(18px, 5.33vw, 24px);
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
@@ -328,7 +345,7 @@ h2 {
 
   h2 {
     font-family: "Zen Old Mincho";
-    font-size: 20px;
+    font-size: clamp(18px, 5.33vw, 24px);
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
@@ -358,15 +375,15 @@ h2 {
 
   &__txt {
     font-family: "Noto Sans JP";
-    font-size: 16px;
+    font-size: clamp(15px, 4.26vw, 18px);
     font-weight: 400;
     line-height: 200%;
-    padding: 29px 24px 275px;
+    padding: 29px 32px 275px;
     position: relative;
 
     span.num_la {
       font-family: "Zen Old Mincho";
-      font-size: 48px;
+      font-size: clamp(46px, 12.8vw, 56px);
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
@@ -375,7 +392,7 @@ h2 {
 
     .txt-md {
       font-family: "Zen Old Mincho";
-      font-size: 32px;
+      font-size: clamp(32px, 8.533vw, 36px);
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
@@ -406,7 +423,7 @@ h2 {
 
     .c-list-num {
       font-family: Mohave;
-      font-size: 48px;
+      font-size: clamp(46px, 12.8vw, 56px);
       font-style: normal;
       font-weight: 300;
       line-height: 100%;
@@ -417,14 +434,14 @@ h2 {
 
     h4 {
       font-family: "Zen Old Mincho";
-      font-size: 24px;
+      font-size: clamp(22px, 6.4vw, 28px);
       font-style: normal;
       font-weight: 700;
       line-height: 140%;
       padding-left: 40px;
 
       span.txt-la {
-        font-size: 32px;
+        font-size: clamp(32px, 8.533vw, 36px);
         font-style: normal;
         font-weight: 700;
         line-height: 140%;
@@ -442,13 +459,30 @@ h2 {
     &.p-list-02 {
       padding-top: 38px;
       padding-bottom: 33px;
-      background: linear-gradient(0deg, #E9E9E9 20.5%, #FFF 67.5%), lightgray -153.08px 0px / 181.643% 98.947% no-repeat;
+      background: linear-gradient(0deg, #E9E9E9 20.5%, #FFF 67.5%), lightgray -153.08px 0px/181.643% 98.947% no-repeat;
       color: #1D2A4A;
+      height: 108vw;
+      max-height: 410px;
+      position: relative;
 
       img {
-        width: 299px;
-        height: 238px;
-        margin: 0 auto;
+        width: 259px;
+        height: 207px;
+        margin-left: 30%;
+      }
+
+      span {
+        position: absolute;
+        top: 46%;
+
+        &.txt-la {
+          position: absolute;
+          top: 80%;
+        }
+      }
+
+      h3 {
+        position: absolute;
       }
     }
 
@@ -464,7 +498,7 @@ h2 {
     padding: 16px;
     background: var(---bg-gray-100, #EFEFEF);
     font-family: "Noto Sans JP";
-    font-size: 16px;
+    font-size: clamp(15px, 4.26vw, 18px);
     font-weight: 400;
     line-height: 170%;
     margin: 24px 24px 40px;
@@ -477,14 +511,14 @@ h2 {
 
     h5 {
       font-family: "Zen Old Mincho";
-      font-size: 40px;
+      font-size: clamp(40px, 10.666vw, 44px);
       font-style: normal;
       font-weight: 500;
       line-height: 150%;
     }
 
     span.txt-xs {
-      font-size: 24px;
+      font-size: clamp(22px, 6.4vw, 28px);
       font-style: normal;
       font-weight: 500;
       line-height: 150%;
@@ -494,7 +528,7 @@ h2 {
 
   p {
     font-family: "Zen Old Mincho";
-    font-size: 24px;
+    font-size: clamp(22px, 6.4vw, 28px);
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
@@ -519,7 +553,7 @@ h2 {
       background: var(---bg-blue-950, #1D2A4A);
       color: var(---text-white, #FFF);
       font-family: "Noto Sans JP";
-      font-size: 14px;
+      font-size: clamp(13px, 3.7333vw, 16px);
       font-style: normal;
       font-weight: 700;
       line-height: 170%;
@@ -531,7 +565,7 @@ h2 {
 
   p {
     font-family: "Noto Sans JP";
-    font-size: 16px;
+    font-size: clamp(15px, 4.26vw, 18px);
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -552,19 +586,19 @@ h2 {
 
   h3 {
     font-family: "Zen Old Mincho";
-    font-size: 40px;
+    font-size: clamp(40px, 10.666vw, 44px);
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
 
     span.txt-xs {
-      font-size: 24px;
+      font-size: clamp(22px, 6.4vw, 28px);
     }
   }
 
   p {
     font-family: "Noto Sans JP";
-    font-size: 16px;
+    font-size: clamp(15px, 4.26vw, 18px);
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -598,7 +632,7 @@ h2 {
   h4 {
     text-align: center;
     font-family: "Zen Old Mincho";
-    font-size: 24px;
+    font-size: clamp(22px, 6.4vw, 28px);
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
@@ -606,7 +640,7 @@ h2 {
 
   &__txt p {
     font-family: "Noto Sans JP";
-    font-size: 16px;
+    font-size: clamp(15px, 4.26vw, 18px);
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -667,7 +701,7 @@ h2 {
       h3 {
         color: var(---text-white, #FFF);
         font-family: "Zen Old Mincho";
-        font-size: 40px;
+        font-size: clamp(40px, 10.666vw, 44px);
         font-style: normal;
         font-weight: 500;
         line-height: 130%;
@@ -675,7 +709,7 @@ h2 {
         padding-left: 24px;
 
         span.txt-xs {
-          font-size: 24px;
+          font-size: clamp(22px, 6.4vw, 28px);
         }
       }
 
@@ -687,7 +721,7 @@ h2 {
       p {
         color: var(---text-white, #FFF);
         font-family: "Noto Sans JP";
-        font-size: 16px;
+        font-size: clamp(15px, 4.26vw, 18px);
         font-style: normal;
         font-weight: 400;
         line-height: 170%;
@@ -722,7 +756,7 @@ h2 {
     border: 1px solid var(---border-white, #FFF);
     margin-top: 16px;
     font-family: "Noto Sans JP";
-    font-size: 14px;
+    font-size: clamp(13px, 3.7333vw, 16px);
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -739,6 +773,7 @@ h2 {
 // CTA 
 .l-cta {
   padding: 56px 24px;
+  position: relative;
 
   img.sumikaze_image {
     width: 129px;
@@ -746,13 +781,19 @@ h2 {
     margin: 0 auto 32px;
     position: relative;
 
-    &::after {
-      content: "";
-      background: url(../img/image_sumikaze-shadow.png)no-repeat center/contain;
-      position: absolute;
-      width: 129px;
-      height: 156.465px;
-    }
+
+  }
+
+  &::after {
+    content: "";
+    background: url(../img/image_sumikaze-shadow.png) no-repeat center/contain;
+    position: absolute;
+    z-index: -1;
+    width: 159px;
+    height: 156.465px;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
   }
 
   h4 img {
@@ -761,7 +802,7 @@ h2 {
 
   h5 {
     font-family: "Zen Old Mincho";
-    font-size: 18px;
+    font-size: clamp(17px, 4.8vw, 20px);
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
@@ -779,13 +820,13 @@ h2 {
     align-items: baseline;
     justify-content: center;
     font-family: "Noto Sans JP";
-    font-size: 32px;
+    font-size: clamp(32px, 8.533vw, 36px);
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
 
     span {
-      font-size: 14px;
+      font-size: clamp(13px, 3.7333vw, 16px);
       font-weight: 400;
     }
 
@@ -796,7 +837,7 @@ h2 {
       padding: 3px 8px 3px 8px;
       margin-left: 4px;
       font-family: "Noto Sans JP";
-      font-size: 14px;
+      font-size: clamp(13px, 3.7333vw, 16px);
       font-style: normal;
       font-weight: 400;
       line-height: 130%;
@@ -812,7 +853,7 @@ h2 {
       width: 100%;
       display: block;
       color: #fff;
-      font-size: 16px;
+      font-size: clamp(15px, 4.26vw, 18px);
       font-style: normal;
       font-weight: 700;
       line-height: 100%;
@@ -832,7 +873,7 @@ h2 {
     gap: 12px;
     justify-content: center;
     font-family: "Noto Sans JP";
-    font-size: 14px;
+    font-size: clamp(13px, 3.7333vw, 16px);
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
@@ -840,7 +881,7 @@ h2 {
     text-align: center;
 
     a {
-      font-size: 24px;
+      font-size: clamp(22px, 6.4vw, 28px);
       font-style: normal;
       font-weight: 500;
       letter-spacing: 1.2px;
@@ -849,7 +890,7 @@ h2 {
       border-left: 1px solid var(---border-gray-200, #DCDCDC);
 
       span {
-        font-size: 12px;
+        font-size: clamp(11px, 3.2vw, 14px);
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
@@ -881,7 +922,7 @@ h2 {
 
       .c-txt-name {
         font-family: "Noto Sans JP";
-        font-size: 12px;
+        font-size: clamp(11px, 3.2vw, 14px);
         font-style: normal;
         font-weight: 400;
         line-height: 170%;
@@ -891,29 +932,37 @@ h2 {
 
       h3 {
         font-family: "Zen Old Mincho";
-        font-size: 24px;
+        font-size: clamp(22px, 6.4vw, 28px);
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
       }
 
-      p {
+      div {
         font-family: "Noto Sans JP";
-        font-size: 16px;
+        font-size: clamp(13px, 3.7333vw, 16px);
         font-style: normal;
         font-weight: 400;
-        line-height: 170%;
+        line-height: 130%;
       }
 
+      .c-txt-user {
+        font-size: clamp(15px, 4.26vw, 18px);
+        line-height: 1.7;
+      }
 
     }
+  }
+
+  .c-btn-more.js-toggle-head::after {
+    display: none;
   }
 }
 
 .c-btn-more {
   color: var(---text-blue-950, #1D2A4A);
   font-family: "Noto Sans JP";
-  font-size: 14px;
+  font-size: clamp(13px, 3.7333vw, 16px);
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -922,6 +971,11 @@ h2 {
   display: flex;
   gap: 8px;
   justify-content: center;
+}
+
+.c-btn-close {
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 // FAQ
@@ -952,10 +1006,12 @@ h2 {
 .js-toggle-head {
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .js-toggle-head::before {
-  display: block;
+  display: none;
   content: '';
   position: absolute;
   width: 2px;
@@ -965,6 +1021,12 @@ h2 {
   border-radius: 1px;
   transition-duration: 0.2s;
   transform: translateY(-50%);
+  background-color: #DCDCDC;
+}
+
+.js-toggle-head.is-open::before {
+  transform: translateY(-50%) rotate(-90deg);
+  top: 50%;
   background-color: #DCDCDC;
 }
 
@@ -991,6 +1053,41 @@ h2 {
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  .js-toggle-head::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    right: 19px;
+    top: 50%;
+    border-radius: 1px;
+    transition-duration: 0.2s;
+    transform: translateY(-50%);
+    background-color: #DCDCDC;
+  }
+
+  .js-toggle-head {
+    &.is-open::before {
+      transform: translateY(-50%) rotate(-90deg);
+      top: 50%;
+      background-color: #DCDCDC;
+    }
+  }
+
+  .js-toggle-head::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    right: 12px;
+    top: 50%;
+    border-radius: 1px;
+    transform: translateY(-50%);
+    background-color: #DCDCDC;
+  }
 }
 
 .l-faq:before {
@@ -1016,7 +1113,7 @@ h2 {
 
 .c-faq-description {
   padding: 16px;
-  font-size: 16px;
+  font-size: clamp(15px, 4.26vw, 18px);
   font-weight: 400;
   line-height: 1.7;
 }
@@ -1026,7 +1123,7 @@ h2 {
   padding-left: 48px;
   margin-right: 12px;
   font-family: "Noto Sans JP";
-  font-size: 16px;
+  font-size: clamp(15px, 4.26vw, 18px);
   font-style: normal;
   font-weight: 400;
   line-height: 130%
@@ -1039,8 +1136,9 @@ h2 {
   background: url(../img/icon_faq_q.svg);
   background-size: cover;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
 }
 
 .c-faq-description p {
@@ -1048,7 +1146,7 @@ h2 {
   padding-left: 48px;
   word-break: break-all;
   font-family: "Noto Sans JP";
-  font-size: 16px;
+  font-size: clamp(15px, 4.26vw, 18px);
   font-style: normal;
   font-weight: 400;
   line-height: 170%;
@@ -1065,9 +1163,20 @@ h2 {
   left: 0;
 }
 
+.c-faq-description .txt-xs {
+  font-size: clamp(11px, 3.2vw, 14px);
+  font-weight: 400;
+  line-height: 170%
+}
+
 /* SPEC */
 .l-spec {
   position: relative;
+
+  .c-btn-more.js-toggle-head::before,
+  .c-btn-more.js-toggle-head::after {
+    display: none;
+  }
 }
 
 .p-spec__wrap {
@@ -1090,12 +1199,13 @@ h2 {
   border: 1px solid var(--border-gray);
   border-collapse: collapse;
   border: 1px solid var(---border-gray-200, #DCDCDC);
+  font-family: "Noto Sans JP";
 }
 
 .l-spec th {
   padding: 8px 16px;
-  width: 162px;
-  font-size: 14px;
+  width: 98px;
+  font-size: clamp(11px, 3.2vw, 14px);
   font-weight: 500;
   line-height: 1.3;
   background: #FAFAFA;
@@ -1103,14 +1213,14 @@ h2 {
 
 .l-spec td {
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: clamp(11px, 3.2vw, 14px);
   font-weight: 400;
   line-height: 1.3;
   text-align: center;
 }
 
 .c-sell-heading {
-  width: 128px;
+  width: 98px;
 }
 
 .c-icon-mode {
@@ -1124,7 +1234,7 @@ h2 {
   flex-wrap: wrap;
   margin-bottom: 16px;
   font-family: "Noto Sans JP";
-  font-size: 12px;
+  font-size: clamp(11px, 3.2vw, 14px);
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -1145,8 +1255,7 @@ h2 {
 }
 
 .p-caution {
-  margin-top: 24px;
-  margin-bottom: 40px;
+  margin: 24px 24px 40px;
   padding: 16px;
   border: 1px solid var(---border-gray-200, #DCDCDC);
 }
@@ -1154,7 +1263,7 @@ h2 {
 .p-caution h3 {
   margin-bottom: 8px;
   font-family: "Noto Sans JP";
-  font-size: 16px;
+  font-size: clamp(15px, 4.26vw, 18px);
   font-style: normal;
   font-weight: 500;
   line-height: 170%;
@@ -1166,7 +1275,7 @@ h2 {
 }
 
 .p-caution li {
-  font-size: 14px;
+  font-size: clamp(13px, 3.7333vw, 16px);
   font-style: normal;
   font-weight: 400;
   line-height: 170%;
@@ -1192,7 +1301,7 @@ h2 {
 
   .c-txt-message {
     font-family: "Noto Sans JP";
-    font-size: 16px;
+    font-size: clamp(15px, 4.26vw, 18px);
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
@@ -1208,7 +1317,7 @@ h2 {
 
     .c-company-name {
       font-family: "Noto Sans JP";
-      font-size: 20px;
+      font-size: clamp(18px, 5.33vw, 24px);
       font-style: normal;
       font-weight: 500;
       line-height: 170%;
@@ -1217,7 +1326,7 @@ h2 {
 
     .c-personal-info {
       font-family: "Noto Sans JP";
-      font-size: 14px;
+      font-size: clamp(13px, 3.7333vw, 16px);
       font-style: normal;
       font-weight: 400;
       line-height: 130%;
@@ -1238,9 +1347,65 @@ footer {
     color: #fff;
     text-align: center;
     font-family: "Noto Sans JP";
-    font-size: 12px;
+    font-size: clamp(11px, 3.2vw, 14px);
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+  }
+}
+
+.c-btn-more.js-toggle-head {
+  transition: 0.3s ease;
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.c-btn-more.js-toggle-head.is-open {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+
+  .l-content__main,
+  .l-head {
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .l-content__main {
+    width: 100dvw;
+    max-width: unset;
+  }
+
+  .l-content__bg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .l-head {
+    // margin-top: 2rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  // .l-content::after {
+  //   content: "";
+  //   width: 100%;
+  //   max-width: 500px;
+  //   height: 2rem;
+  //   position: fixed;
+  //   z-index: 1000;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   background: linear-gradient(90deg, #ecedf2, #fdfbfc);
+  // }
+
+  .l-mv {
+    padding-top: 72px;
   }
 }
